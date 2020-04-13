@@ -1,7 +1,6 @@
 package fr.ece.projet.projet_match_tracker;
 
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -16,8 +15,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Preparation extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-
-    private SQLiteDatabase database;
 
     public static final String NOM_COMBATTANT_UN = "fr.ece.projet.projet_match_tracker.extra.NOM_COMBATTANT_UN";
     public static final String NOM_COMBATTANT_DEUX = "fr.ece.projet.projet_match_tracker.extra.NOM_COMBATTANT_DEUX";
@@ -34,9 +31,6 @@ public class Preparation extends AppCompatActivity implements AdapterView.OnItem
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preparatifs);
-
-        MatchDBHelper dbHelper = new MatchDBHelper(this);
-        database = dbHelper.getWritableDatabase();
 
         //Déclaration des Views + affiliation
         fighter_one = (EditText) findViewById(R.id.edit_fighter1);

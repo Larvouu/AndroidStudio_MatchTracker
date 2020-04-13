@@ -44,14 +44,6 @@ public class MatchDBHelper extends SQLiteOpenHelper {
                 MatchContract.MatchEntry.COLUMN_TIMESTAMP + " TIMESTAMP DEFAULT CURRENT_TIMESTAMP" +
                 ");";
 
-                /*"CREATE TABLE " +
-                MatchContract.MatchEntry.TABLE_NAME + " (" +
-                MatchContract.MatchEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                MatchContract.MatchEntry.COLUMN_NAME + " TEXT NOT NULL, " +
-                MatchContract.MatchEntry.COLUMN_AMOUNT + " INTEGER NOT NULL, " +
-                MatchContract.MatchEntry.COLUMN_TIMESTAMP + " TIMESTAMP DEFAULT CURRENT_TIMESTAMP" +
-                ");";*/
-
         sqLiteDatabase.execSQL(SQL_CREATE_MATCHLIST_TABLE);
     }
 

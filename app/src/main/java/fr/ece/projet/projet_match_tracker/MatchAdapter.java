@@ -87,6 +87,7 @@ public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.MatchViewHol
             Bitmap image = BitmapFactory.decodeByteArray(mCursor.getBlob(mCursor.getColumnIndex(MatchContract.MatchEntry.IMAGE)), 0, mCursor.getBlob(mCursor.getColumnIndex(MatchContract.MatchEntry.IMAGE)).length);
             holder.imageRecycleView.setImageBitmap(image);
         }
+        //Blindage du cas où on ne rentre aucune photo --> On en met une par défaut
         else if(mCursor.getBlob(mCursor.getColumnIndex(MatchContract.MatchEntry.IMAGE)) == null){
             holder.imageRecycleView.setImageResource(R.mipmap.ic_launcher_mma);
         }

@@ -178,12 +178,6 @@ public class Camera extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        /** //called when image was captured from camera
-         *  //ce code faisait direct setImage avec la photo prise
-         if(resultCode == RESULT_OK){
-         //set the image captures to our Image
-         la_photo.setImageURI(image_uri);
-         } */
 
         img = new byte[0];
 

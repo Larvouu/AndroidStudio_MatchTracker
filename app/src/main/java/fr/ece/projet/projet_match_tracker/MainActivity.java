@@ -9,9 +9,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-public class MainActivity extends AppCompatActivity /**implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener*/ {
+public class MainActivity extends AppCompatActivity {
 
-    //private GoogleApiCLient googleApiClient;
     Button new_match_btn;
     Button match_precedents_btn;
 

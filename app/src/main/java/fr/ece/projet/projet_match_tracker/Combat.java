@@ -1,7 +1,6 @@
 package fr.ece.projet.projet_match_tracker;
 
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -15,8 +14,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Combat extends AppCompatActivity {
-
-    private SQLiteDatabase database;
 
     //Pour passer les données jusqu'à Map, pour y créer la SQLite
     public static final String VAINQUEUR = "fr.ece.projet.projet_match_tracker.extra.VAINQUEUR";
@@ -78,9 +75,6 @@ public class Combat extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_combat);
-
-        MatchDBHelper dbHelper = new MatchDBHelper(this);
-        database = dbHelper.getWritableDatabase();
 
         nom_combattant_un = (TextView) findViewById(R.id.textview_comattant_un);
         nom_combattant_deux = (TextView) findViewById(R.id.textview_comattant_deux);
